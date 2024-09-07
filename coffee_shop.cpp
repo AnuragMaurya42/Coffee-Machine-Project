@@ -7,12 +7,12 @@ void report();
 
 using namespace std;
 
-class lokit
+class anurag
 {
     int teapowder, coffeepowder, sugar, milk, water, a, h, c, d, e, x, y, z, o, g;
 
 public:
-    lokit()
+    anurag()
     {
 
         teapowder = 500;    // tea powder in gm
@@ -23,7 +23,7 @@ public:
     }
     int noc;
     int l;
-    bool lokit_flag = true;
+    bool anurag_flag = true;
     int b[5];
     char ch;
     void disperse()
@@ -46,7 +46,7 @@ public:
         {
             if (ch == 'T' || ch == 't')
             {
-                cout << ("\nEnter 'H' for Hard tea || 'S' for soft      tea\n");
+                cout << ("\nEnter 'H' for Hard tea || 'S' for soft tea\n");
                 cin >> ch;
                 if (ch == 'H' || ch == 'h')
                 {
@@ -291,6 +291,7 @@ public:
 
                     l = noc * 10;
                     o = o + l;
+
                     cout << ("\nAmt=" + l);
                     for (int i = 0; i < 1000000000; i++)
                     {
@@ -322,392 +323,120 @@ public:
                     }
                     system("clear");
                 }
-
-                cout << ("\n=======================================================================================================");
             }
-            if (ch == 't' || ch == 'T' || ch == 'c' || ch == 'C')
-            {
-                t = false;
-            }
-            else
-            {
-                t = true;
+            cout << "\nEnter 1 for continue else 0\n";
+            int choice;
+            cin >> choice;
+            if (choice == 0)
                 break;
-            }
         }
     }
+
     void refill()
     {
-        cout << ("\n=======================================================================================================\n");
-        cout << ("\n\t\t\t\t\t***Refilling***\n");
-        cout << ("\n=======================================================================================================\n");
-
-        int k;
-
-        cout << ("\nEnter 1 to refill Tea powder");
-        cout << ("\nEnter 2 to refill coffee powder");
-        cout << ("\nEnter 3 to refill milk");
-        cout << ("\nEnter 4 to refill water");
-        cout << ("\nEnter 5 to refill sugar");
-        cout << ("\n=======================================================================================================\n");
-
-        cin >> k;
-
-        switch (k)
-        {
-
-        case 1:;
-
-            int req_teapowder;
-            req_teapowder = 500 - teapowder;
-
-            while (lokit_flag == true)
-            {
-                cout << ("\nRefill Tea powder\n");
-                cin >> b[0];
-                if (b[0] <= req_teapowder)
-                {
-                    teapowder = teapowder + b[0];
-                    lokit_flag = false;
-                }
-                else
-                    cout << ("\nQuantity>capacity\n");
-                continue;
-            }
-
-            break;
-
-        case 2:
-
-            int req_coffeepowder;
-            req_coffeepowder = 500 - coffeepowder;
-            while (lokit_flag == true)
-
-            {
-                cout << ("\nRefill Coffee powder\n");
-
-                cin >> b[1];
-
-                if (b[1] <= req_coffeepowder)
-                {
-                    coffeepowder = coffeepowder + b[1];
-                    lokit_flag = false;
-                }
-                else
-                    cout << ("\nQuantity>capacity\n");
-                continue;
-            }
-            break;
-
-        case 3:
-
-            int req_milk;
-            req_milk = 1000 - milk;
-
-            while (lokit_flag == true)
-            {
-
-                cout << ("\nRefill Milk\n");
-                cin >> b[2];
-
-                if (b[2] <= req_milk)
-                {
-                    milk = milk + b[2];
-                    lokit_flag = false;
-                }
-                else
-                    cout << ("\nQuantity>capacity\n");
-                continue;
-            }
-            break;
-
-        case 4:;
-
-            int req_water;
-            req_water = 1000 - water;
-
-            while (lokit_flag == true)
-            {
-                cout << ("\nRefill Water\n");
-                cin >> b[3];
-
-                if (b[3] <= req_water)
-                {
-                    water = water + b[3];
-                    lokit_flag = false;
-                }
-                else
-                    cout << ("\nQuantity>capacity\n");
-                continue;
-            }
-            break;
-
-        case 5:;
-
-            int req_sugar = 500 - sugar;
-            while (lokit_flag == true)
-            {
-                cout << ("\nRefill Sugar\n");
-                cin >> b[4];
-
-                if (b[4] <= req_sugar)
-                {
-                    sugar = sugar + b[4];
-                    lokit_flag = false;
-                }
-                else
-                    cout << ("\nQuantity>capacity\n");
-                continue;
-            }
-        }
-        cout << ("\n=======================================================================================================\n");
-
-        for (int i = 0; i < 500000000; i++)
-        {
-        }
         system("clear");
-        cout << ("\nrefilling.");
-        for (int i = 0; i < 500000000; i++)
-        {
-        }
-        cout << (".");
-        for (int i = 0; i < 500000000; i++)
-        {
-        }
-        cout << (".");
-        for (int i = 0; i < 500000000; i++)
-        {
-        }
-        cout << (".");
-        for (int i = 0; i < 500000000; i++)
-        {
-        }
-        system("clear");
-        cout << ("\nSuccessfully refilled");
-        for (int i = 0; i < 500000000; i++)
-        {
-        }
+        cout << ("\n=======================================================================================================\n");
+        cout << "\n\t"
+             << "\t"
+             << "\t"
+             << "\t"
+             << "***Refilling containers***\n";
+        cout << ("\n=======================================================================================================\n");
+        teapowder = 500;
+        coffeepowder = 500;
+        milk = 1000;
+        water = 1000;
+        sugar = 500;
+        cout << ("\nRefilled successfully\n");
         system("clear");
     }
 
     void report()
     {
-        cout << ("\n=======================================================================================================");
-        cout << ("\n\t\t\t***Report***");
-        cout << ("=======================================================================================================");
-        int m;
+        system("clear");
+        cout << ("\n=======================================================================================================\n");
+        cout << "\n\t"
+             << "\t"
+             << "\t"
+             << "\t"
+             << "***Generating report***\n";
+        cout << ("\n=======================================================================================================\n");
 
-        cout << ("\nEnter 1. for capacity of container");
-        cout << ("\nEnter 2. for no. of cups dispered");
-        cout << ("\n=======================================================================================================");
-        cin >> m;
-        e = a + c + h + d;
+        cout << ("\nTotal number of cups of Hard Tea made=" + a + "\n");
+
+        cout << ("\nTotal no of cups of soft tea made=" + h + "\n");
+
+        cout << ("\nTotal number of cups of hard coffee made=" + c + "\n");
+
+        cout << ("\nTotal no of cups of soft coffee made=" + d + "\n");
+
+        cout << ("\nTotal amount collected for Hard tea=" + x + "\n");
+
+        cout << ("\nTotal amt collected for soft tea=" + y + "\n");
+
+        cout << ("\nTotal amt collected for hard coffee=" + z + "\n");
+
+        cout << ("\nTotal amt collected for soft coffee=" + o + "\n");
+
         g = x + y + z + o;
-        switch (m)
-        {
-        case 1:
 
-            cout << ("\nTea powder\tcoffee powder\tmilk\twater\tsugar\t\n");
-            cout << teapowder << "\t\t" << coffeepowder << "\t\t" << milk << "\t" << water << "\t" << sugar;
-            cout << ("\n=======================================================================================================");
+        cout << ("\nTotal amount Collected=" + g + "\n");
 
-            break;
-
-        case 2:
-
-            cout << ("\n=======================================================================================================");
-            cout << ("\n\tparticular\tNo. of cups\tAmount\t");
-            cout << ("\n=======================================================================================================");
-            cout << "\n\tHard tea\t" << a << "\t\t" << x;
-            cout << "\n\tsoft tea\t" << h << "\t\t" << y;
-            cout << "\n\tHard coffee\t" << c << "\t\t" << z;
-            cout << "\n\tsoft coffee\t" << d << "\t\t" << o;
-            cout << "\n=======================================================================================================";
-            cout << "\n\tTotal\t\t" << e << "\t\t" << g;
-            cout << "\n=======================================================================================================";
-        }
+        cout << ("\n=======================================================================================================\n");
     }
 };
 
 int main()
 {
-    lokit ob;
-
     system("clear");
-    cout << "\n=======================================================================================================";
+    anurag a;
+    cout << ("\n=======================================================================================================\n");
     cout << "\n\t"
          << "\t"
          << "\t"
          << "\t"
-         << "***Vending Machine***"
-         << "\t";
-    cout << "\n=======================================================================================================";
-    cout << "\n\t"
-         << "capacity of the container is given below";
-    cout << "\n\t"
-         << "Tea powder=500gm";
-    cout << "\n\t"
-         << "coffee powder=500gm";
-    cout << "\n\t"
-         << "milk=1000ml";
-    cout << "\n\t"
-         << "water=1000ml";
-    cout << "\n\t"
-         << "sugar=500gm";
-    cout << "\n=======================================================================================================";
+         << "***WELCOME TO OUR TEA SHOP***\n";
+    cout << ("\n=======================================================================================================\n");
 
-    cout << "\n\t"
-         << "Price for hard tea & Hard coffee=20Rs ";
-    cout << "\n\t"
-         << "Price for soft tea & soft coffee=10Rs";
-    int n;
-    while (true)
+    cout << ("\nEnter 1 to Enter Admin Mode else 0\n");
+    int choice;
+    cin >> choice;
+    if (choice == 1)
     {
-
-        cout << "\n=======================================================================================================";
-        cout << "\n\t"
-             << "Enter 1 for disperse";
-        cout << "\n\t"
-             << "Enter 2 for refill ";
-        cout << "\n\t"
-             << "Enter 3 for report";
-        cout << "\n\t"
-             << "Enter 4 for exit";
-        cout << "\n=======================================================================================================\n";
-        cin >> n;
-
-        switch (n)
+        while (1)
         {
-        case 1:
-
-            for (int i = 0; i < 1000000000; i++)
-            {
-            }
-            cout << ("\f");
-            cout << "Loading.";
-            for (int i = 0; i < 1000000000; i++)
-            {
-            }
-            cout << ".";
-            for (int i = 0; i < 1000000000; i++)
-            {
-            }
-            cout << ".";
-            for (int i = 0; i < 1000000000; i++)
-            {
-            }
-            cout << ".";
-            for (int i = 0; i < 1000000000; i++)
-            {
-            }
             system("clear");
-            cout << ("Successful");
-            for (int i = 0; i < 1000000000; i++)
+            cout << ("\n=======================================================================================================\n");
+            cout << "\n\t"
+                 << "\t"
+                 << "\t"
+                 << "\t"
+                 << "***Admin Mode***\n";
+            cout << ("\n=======================================================================================================\n");
+            cout << ("\n1-Disperse tea/coffee\n");
+            cout << ("\n2-Refill Container\n");
+            cout << ("\n3-Report\n");
+            cout << ("\n4-Exit\n");
+            cout << ("\nEnter your choice\n");
+            cin >> choice;
+            switch (choice)
             {
+            case 1:
+                a.disperse();
+                break;
+            case 2:
+                a.refill();
+                break;
+            case 3:
+                a.report();
+                break;
+            case 4:
+                exit(0);
+                break;
+            default:
+                cout << ("\nWrong choice entered\n");
+                exit(0);
             }
-            system("clear");
-
-            ob.disperse();
-
-            break;
-
-        case 2:
-
-            for (int i = 0; i < 1000000000; i++)
-            {
-            }
-            cout << ("\f");
-            cout << "Loading.";
-            for (int i = 0; i < 1000000000; i++)
-            {
-            }
-            cout << ".";
-            for (int i = 0; i < 1000000000; i++)
-            {
-            }
-            cout << ".";
-            for (int i = 0; i < 1000000000; i++)
-            {
-            }
-            cout << ".";
-            for (int i = 0; i < 1000000000; i++)
-            {
-            }
-            cout << ("\f");
-            cout << ("Successful");
-            for (int i = 0; i < 1000000000; i++)
-            {
-            }
-            cout << ("\f");
-            ob.refill();
-
-            break;
-
-        case 3:
-            for (int i = 0; i < 1000000000; i++)
-            {
-            }
-            cout << "\f";
-            cout << "Reporting.";
-            for (int i = 0; i < 1000000000; i++)
-            {
-            }
-            cout << ".";
-            for (int i = 0; i < 1000000000; i++)
-            {
-            }
-            cout << ".";
-            for (int i = 0; i < 1000000000; i++)
-            {
-            }
-            cout << ".";
-            for (int i = 0; i < 1000000000; i++)
-            {
-            }
-            cout << ("\f");
-            cout << ("Here it is!");
-            for (int i = 0; i < 1000000000; i++)
-            {
-            }
-            cout << ("\f");
-            ob.report();
-
-            break;
-        }
-        if (n == 4)
-        {
-            for (int i = 0; i < 1000000000; i++)
-            {
-            }
-            cout << ("\f");
-            cout << "Exiting.";
-            for (int i = 0; i < 1000000000; i++)
-            {
-            }
-            cout << ".";
-            for (int i = 0; i < 1000000000; i++)
-            {
-            }
-            cout << ".";
-            for (int i = 0; i < 1000000000; i++)
-            {
-            }
-            cout << ".";
-            for (int i = 0; i < 1000000000; i++)
-            {
-            }
-            cout << ("\f");
-            cout << ("Successfully Exited");
-            for (int i = 0; i < 1000000000; i++)
-            {
-            }
-            cout << ("\f");
-            cout << ("\nThank you!");
-            cout << ("\nVisit again...");
-
-            exit(0);
         }
     }
 }
-
-
